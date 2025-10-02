@@ -1,17 +1,17 @@
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
-import cv2
 import numpy as np
 from langchain_groq import ChatGroq
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 from langchain.prompts import PromptTemplate
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
-os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+# load_dotenv()
+
+os.environ['GROQ_API_KEY'] = st.secrets.api_keys.GROQ_API_KEY
 # Set page configuration
 st.set_page_config(layout="wide")
 
@@ -28,7 +28,7 @@ if "annotated_image" not in st.session_state:
 # Load YOLO model
 @st.cache_resource
 def load_model():
-    return YOLO('/home/ikram-ali/Downloads/xavor-work/rice_app/best.pt')
+    return YOLO('model/best.pt')
 
 # Initialize LangChain components
 @st.cache_resource

@@ -5,3 +5,4 @@ langchain-groq
 pillow
 opencv-python
 numpy
+python-dotenv
