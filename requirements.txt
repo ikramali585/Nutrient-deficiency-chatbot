@@ -1,6 +1,7 @@
 streamlit
 ultralytics
 langchain
+langchain-core
 langchain-groq
 langchain-classic
 pillow

@@ -5,7 +5,7 @@ import numpy as np
 from langchain_groq import ChatGroq
 from langchain_classic.memory import ConversationBufferMemory
 from langchain_classic.chains import ConversationChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 import os
 # from dotenv import load_dotenv
 
