@@ -3,8 +3,8 @@ from ultralytics import YOLO
 from PIL import Image
 import numpy as np
 from langchain_groq import ChatGroq
-from langchain.memory import ConversationBufferMemory
-from langchain.chains import ConversationChain
+from langchain_classic.memory import ConversationBufferMemory
+from langchain_classic.chains import ConversationChain
 from langchain.prompts import PromptTemplate
 import os
 # from dotenv import load_dotenv

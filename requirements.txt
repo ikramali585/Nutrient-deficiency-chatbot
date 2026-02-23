@@ -2,6 +2,7 @@ streamlit
 ultralytics
 langchain
 langchain-groq
+langchain-classic
 pillow
 opencv-python-headless
 numpy
