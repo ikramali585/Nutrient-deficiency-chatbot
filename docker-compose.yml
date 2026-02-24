@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      # Copy your GROQ_API_KEY from .env or export it in your shell before running
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    restart: unless-stopped
+    # Not exposed to host – only reachable from the frontend container via 'backend:8000'
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped

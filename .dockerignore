@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Dev tools
+.vscode/
+.streamlit/
+
+# Other apps / frontend handled by its own build context
+frontend/
+app.py
+test_images/
+
+# Git
+.git/
+.gitignore

@@ -8,3 +8,6 @@ pillow
 opencv-python-headless
 numpy
 python-dotenv
+fastapi
+uvicorn[standard]
+python-multipart
